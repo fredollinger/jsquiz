@@ -1,2 +1,2 @@
 open:
-	firefox index.html&
+	chromium-browser index.html&
