@@ -19,12 +19,41 @@ function countTotalByClassName(klass){
      return total;
 }
 
+/* getGreatestChoice()
+ *
+ * Given an array of hashes, return the one with the highest number.
+ *
+ */
+function getGreatestChoice(arr){
+    res="";
+    size=0;
+    for ( key in arr){
+        console.log(key.name);
+        console.log(key.count);
+    }
+    return size;
+}
 
 function results(){
-     a = countTotalByClassName("A");
-     item = {};
-     item["sanguine"]=countTotalByClassName("A");
-     item["phlegmatic"]=countTotalByClassName("B");
-     item["meloncholic"] = countTotalByClassName("C");
-     item["choleric"] = countTotalByClassName("D");
+     item = {}; // reusable hash
+     arr=[];    // array of items
+ 
+     // BEGIN BUILD HASH ARRAY
+     item["name"]="saguine";
+     item["count"]=countTotalByClassName("A");
+     arr.push(item);
+     console.log(arr[0].name);
+     console.log(arr[0].count);
+     item["name"]="phlegmatic";
+     item["count"]=countTotalByClassName("B");
+     arr.push(item);
+     item["name"] = "meloncholic";
+     item["count"] = countTotalByClassName("C");
+     arr.push(item);
+     item["name"] = "choleric";
+     item["count"] = countTotalByClassName("D");
+     arr.push(item);
+     // END BUILD HASH ARRAY
+
+     //res=getGreatestChoice(arr);
 }
