@@ -1,0 +1,2 @@
+open:
+	firefox index.html&
