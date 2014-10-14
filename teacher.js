@@ -22,8 +22,9 @@ function countTotalByClassName(klass){
 
 function results(){
      a = countTotalByClassName("A");
-     b = countTotalByClassName("B");
-     c = countTotalByClassName("C");
-     d = countTotalByClassName("D");
-     alert(a);
+     item = {};
+     item["sanguine"]=countTotalByClassName("A");
+     item["phlegmatic"]=countTotalByClassName("B");
+     item["meloncholic"] = countTotalByClassName("C");
+     item["choleric"] = countTotalByClassName("D");
 }
