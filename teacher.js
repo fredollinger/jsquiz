@@ -17,7 +17,7 @@ function countTotalByClassName(klass){
          }
      };
      return total;
-}
+} // END countTotalByClassName()
 
 /* getGreatestChoice()
  *
@@ -27,33 +27,39 @@ function countTotalByClassName(klass){
 function getGreatestChoice(arr){
     res="";
     size=0;
-    for ( key in arr){
-        console.log(key.name);
-        console.log(key.count);
+    for (var i = 0; i < arr.length; i++) {
+	if (arr[i].count > size){
+	    res=arr[i].name;
+	}
     }
-    return size;
-}
+    return res;
+} // END getGreatestChoice()
 
 function results(){
-     item = {}; // reusable hash
+     item1 = {}; 
+     item2 = {}; 
+     item3 = {}; 
+     item4 = {}; 
+
      arr=[];    // array of items
  
      // BEGIN BUILD HASH ARRAY
-     item["name"]="saguine";
-     item["count"]=countTotalByClassName("A");
-     arr.push(item);
-     console.log(arr[0].name);
-     console.log(arr[0].count);
-     item["name"]="phlegmatic";
-     item["count"]=countTotalByClassName("B");
-     arr.push(item);
-     item["name"] = "meloncholic";
-     item["count"] = countTotalByClassName("C");
-     arr.push(item);
-     item["name"] = "choleric";
-     item["count"] = countTotalByClassName("D");
-     arr.push(item);
+     item1["name"]="saguine";
+     item1["count"]=countTotalByClassName("A");
+     arr.push(item1);
+     item2["name"]="phlegmatic";
+     item2["count"]=countTotalByClassName("B");
+     arr.push(item2);
+     item3["name"] = "meloncholic";
+     item3["count"] = countTotalByClassName("C");
+     arr.push(item3);
+     item4["name"] = "choleric";
+     item4["count"] = countTotalByClassName("D");
+     arr.push(item4);
      // END BUILD HASH ARRAY
 
-     //res=getGreatestChoice(arr);
-}
+     res=getGreatestChoice(arr);
+
+     alert("Your temperment is: " + res);
+
+} // END results()

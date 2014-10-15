@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="generator" content=
-"HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
 <meta charset="utf-8">
 <script type="text/javascript" src="teacher.js"></script>
-<title>Hello World</title>
+<title>Personality Test</title>
 </head>
 <body>
 <h1>Personality Test</h1>
 
+<!-- BEGIN QUESTION ONE
+To add a new question, clone the BEGIN and END block.
+Change the questions.
+All the name elements should be the same to make the radio buttons
+mutually exclusive.
+
+Usually, it's best just to make the third question "3" and so on.
+-->
 <div><h2>You have a group project. You...</h2>
 <form action="">
 <p><input type="radio" name="1" class="A" checked> 
@@ -25,7 +31,9 @@
 ...get as many people in the group as possible.
 </p>
 </form></div>
+<!-- END QUESTION ONE -->
 
+<!-- BEGIN QUESTION TWO -->
 <div><h2>You are in a band. You are</h2>
 <form action="">
 <p><input type="radio" name="2" class="A" checked> 
@@ -41,6 +49,7 @@
 ...lead singer or a rap/metal band.
 </p>
 </form></div>
+<!-- END QUESTION TWO -->
 
 <button type="grade" onclick="results()">Results</button>
 </div>
